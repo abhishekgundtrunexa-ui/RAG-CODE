@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Invoice</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      /* background-color: #f5f5f5; */
+      height: 100%;
+    }
+
+    .container {
+      /* width: 210mm; */
+      height: 100%;
+      margin: 0 auto;
+      padding: 20px;
+      /* background-color: #ffffff; */
+      /* border-radius: 8px; */
+      /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+      /* box-sizing: border-box; */
+      overflow: hidden;
+      margin-top: 0;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #333;
+    }
+
+    h1 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 14px;
+      margin: 5px 0;
+    }
+
+    h3 {
+      font-size: 12px;
+      margin: 5px 0;
+      background-color: #d3d3d3;
+      padding: 4px;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    p {
+      margin: 1px 0;
+    }
+
+    .flex-container {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    .flex-item {
+      width: 48%;
+    }
+
+    .billing-info,
+    .summary,
+    .detailed-billing {
+      padding: 10px;
+      border-radius: 5px;
+      background-color: transparent;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+
+    /* Table styling */
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+    }
+
+    .table th,
+    .table td {
+      text-align: left;
+      padding: 8px;
+      font-size: 11px;
+      border: none;
+    }
+
+    .table th {
+      background-color: #d3d3d3;
+      font-weight: bold;
+    }
+
+    .table td.total {
+      font-weight: bold;
+      font-size: 12px;
+    }
+
+    .table td.desc {
+      text-align: left;
+    }
+
+    /* Horizontal line styling */
+    .section-line {
+      margin: 10px 0;
+      border: 0;
+      border-top: 1px solid #333;
+    }
+
+    .footer {
+      margin-top: 10px;
+      font-size: 10px;
+      color: #666;
+      text-align: center;
+    }
+
+    /* .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .logo img {
+      height: 40px;
+    } */
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 80px;
+      max-width: 150px;
+      object-fit: contain;
+      /* margin-bottom: 40px; */
+    }
+
+    .header-text {
+      flex: 1;
+      margin-top: 2px;
+    }
+
+    /* Total Amount Row styling */
+    .total-cell {
+      background-color: #28a745;
+      color: #ffffff;
+      font-weight: bold;
+    }
+
+    /* Print mode styling */
+    /* @media print {
+        body,
+        .container {
+          width: 210mm;
+          margin: 0;
+        }
+        .container {
+          padding: 10mm;
+          box-shadow: none;
+          margin-top: 0; 
+        }
+      } */
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Header section with logo and title -->
+    <div class="header">
+      <h1>INVOICE</h1>
+      <div class="logo">
+        <img src="{{logo}}" alt="Flownex Logo" />
+      </div>
+    </div>
+
+    <p><b>Here’s your invoice for your charging session.</b></p>
+    <br />
+
+    <div class="flex-container">
+      <!-- From Section -->
+      <div class="flex-item">
+        <h2>From</h2>
+        <p>{{cpoName}}</p>
+        <div id="dynamicAddress"></div>
+        <p>+91 {{cpoPhoneNumber}}</p>
+        <p>{{cpoEmail}}</p>
+      </div>
+
+      <!-- Invoice Section -->
+      <div class="flex-item">
+        <h2>Invoice</h2>
+        <p>Date: {{date}}</p>
+        <p>Invoice ID: {{invoiceNumber}}</p>
+        <p>Transaction ID: {{transactionUuid}}</p>
+        <p>Session ID: {{sessionId}}</p>
+      </div>
+    </div>
+
+    <!-- Horizontal line -->
+    <hr class="section-line" />
+
+    <div class="billing-info">
+      <h2><b>Billed To</b></h2>
+      <p>Daniel Bennett</p>
+      <!-- <p>Vehicle Registration Number: ABCX5678</p> -->
+      <p>Location: 60 Airport Blvd., Singapore 819643</p>
+      <p>Singapore Changi Airport</p>
+    </div>
+
+    <!-- Horizontal line -->
+    <hr class="section-line" />
+
+    <div class="summary">
+      <h2>Charging Session Summary</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <!-- <th>Vehicle ID</th> -->
+            <th>Duration</th>
+            <th>Energy Consumed (kWh)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{chargingSessionDate}}</td>
+            <td>{{startTime}}</td>
+            <td>{{endTime}}</td>
+            <!-- <td>EV-ABC123</td> -->
+            <td>{{chargingDuration}}</td>
+            <td>{{effectiveEnergyConsumed}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Horizontal line -->
+    <hr class="section-line" />
+
+    <div class="detailed-billing">
+      <h2>Detailed Billing</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Total</th>
+            <th>Unit Price ({{currencySymbol}})</th>
+            <th>Amount ({{currencySymbol}})</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="desc">Energy Consumed (kWh)</td>
+            <td>{{effectiveEnergyConsumed}}</td>
+            <td>{{effectiveBaseRate}}</td>
+            <td>{{baseFare}}</td>
+          </tr>
+          <tr>
+            <td class="desc">Parking Rate (hrs)</td>
+            <td>{{chargingDuration}}</td>
+            <td>{{parkingRatePerHour}}</td>
+            <td>{{parkingFee}}</td>
+          </tr>
+          <tr>
+            <td class="desc">Peak (hrs) Charges</td>
+            <td>{{peakHours}}</td>
+            <td>{{peakRate}}</td>
+            <td>{{peakCharges}}</td>
+          </tr>
+          <tr>
+            <td class="desc">Off Peak (hrs) Charges</td>
+            <td>{{offPeakHours}}</td>
+            <td>{{offPeakRate}}</td>
+            <td>{{offPeakCharges}}</td>
+          </tr>
+          <tr>
+            <td class="desc">Penalty</td>
+            <td colspan="2"></td>
+            <td>{{penaltyAmount}}</td>
+          </tr>
+          <tr>
+            <td class="desc">Sub Total</td>
+            <td colspan="2"></td>
+            <td>{{grossAmount}}</td>
+          </tr>
+          <tr>
+            <td class="desc">Discount ({{discount}}%)</td>
+            <td colspan="2"></td>
+            <td>{{discountedAmount}}</td>
+          </tr>
+          <tr>
+            <td class="desc">Taxes ({{taxRate}}%)</td>
+            <td colspan="2"></td>
+            <td>{{tax}}</td>
+          </tr>
+          <tr>
+            <td colspan="2"></td>
+            <td class="total-cell">Total Amount to be Paid</td>
+            <td class="total-cell">{{netAmount}} {{currencySymbol}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Horizontal line -->
+    <hr class="section-line" />
+
+    <div class="detailed-billing">
+      <h2>Additional Information</h2>
+      <br />
+      <h3>Payment Information</h3>
+      <table class="table">
+        <tbody>
+          <tr>
+            <td class="desc" style="width: 30%;">Payment Method</td>
+            <td style="width: 80%;">Credit Card</td>
+          </tr>
+          <tr>
+            <td class="desc" style="width: 30%;">Payment Status</td>
+            <td style="width: 50%;">Paid</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class="footer">
+      <p>We hope you had a great experience. Charge with Chargnex again!</p>
+    </div>
+  </div>
+</body>
+<script>
+  const address = "{{cpoAddress}}";
+
+  // Check if the address contains a comma
+  if (address.includes(",")) {
+    const addressParts = address.split(",");
+
+    const dynamicAddress = document.getElementById("dynamicAddress");
+
+    addressParts.forEach((part) => {
+      const addressLine = document.createElement("p");
+      addressLine.textContent = part.trim();
+      dynamicAddress.appendChild(addressLine);
+    });
+  } else {
+    const dynamicAddress = document.getElementById("dynamicAddress");
+    const singleAddress = document.createElement("p");
+    singleAddress.textContent = address;
+    dynamicAddress.appendChild(singleAddress);
+  }
+</script>
+
+</html>

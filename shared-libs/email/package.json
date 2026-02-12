@@ -1,0 +1,15 @@
+{
+  "name": "@shared-libs/email",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "@shared-libs/db": "workspace:*",
+    "@shared-libs/helpers": "workspace:*",
+    "nodemailer": "^6.9.12",
+    "dotenv": "^16.0.3",
+    "luxon": "^3.4.4"
+  },
+  "exports": {
+    ".": "./index.js"
+  }
+}

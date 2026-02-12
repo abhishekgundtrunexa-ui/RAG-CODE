@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<request>
+    <store_id>${store_id}</store_id>
+    <api_token>${api_token}</api_token>
+    <emv_completion>
+        <order_id>${order_id}</order_id>
+        <comp_amount>${comp_amount}</comp_amount>
+        <txn_number>${txn_number}</txn_number>
+    </emv_completion>
+</request>

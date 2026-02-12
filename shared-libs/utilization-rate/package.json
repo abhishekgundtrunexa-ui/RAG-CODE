@@ -1,0 +1,13 @@
+{
+  "name": "@shared-libs/utilization-rate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "@shared-libs/db": "workspace:*",
+    "luxon": "^3.4.4",
+    "dotenv": "^16.0.3"
+  },
+  "exports": {
+    ".": "./index.js"
+  }
+}

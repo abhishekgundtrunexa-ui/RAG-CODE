@@ -1,0 +1,13 @@
+{
+  "name": "@shared-libs/pusher",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "@shared-libs/db": "workspace:*",
+    "dotenv": "^16.0.3",
+    "pusher": "^5.2.0"
+  },
+  "exports": {
+    ".": "./index.js"
+  }
+}

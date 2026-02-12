@@ -1,0 +1,21 @@
+{
+  "name": "@shared-libs/helpers",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "@shared-libs/db": "workspace:*",
+    "@shared-libs/constants": "workspace:*",
+    "@shared-libs/pusher": "workspace:*",
+    "@shared-libs/razorpay": "workspace:*",
+    "dotenv": "^16.0.3",
+    "typeorm": "^0.3.14",
+    "luxon": "^3.4.4",
+    "uuid": "^11.0.3",
+    "sharp": "^0.33.5",
+    "i18n-iso-countries": "^7.14.0",
+    "geoip-lite": "^1.4.10"
+  },
+  "exports": {
+    ".": "./index.js"
+  }
+}

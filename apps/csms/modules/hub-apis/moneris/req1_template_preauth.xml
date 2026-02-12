@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<request>
+    <store_id>${store_id}</store_id>
+    <api_token>${api_token}</api_token>
+    <enc_contactless_preauth>
+        <order_id>${order_id}</order_id>
+        <amount>${amount}</amount>
+        <enc_track2>${enc_track2}</enc_track2>
+        <emv_data>${emv_data}</emv_data>
+        <device_type>${device_type}</device_type>
+        <pos_code>${pos_code}</pos_code>
+        <device_id>${device_id}</device_id>
+        <status_check>${status_check}</status_check>
+        <mpos>${mpos}</mpos>
+    </enc_contactless_preauth>
+</request>

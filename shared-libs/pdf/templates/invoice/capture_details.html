@@ -1,0 +1,97 @@
+<div class="border-b">
+    <h2 style="margin: 10px 0;" class="font-bold m-0">
+        {{charging_session_summary_lbl}}
+    </h2>
+    <table class="summary">
+        <thead>
+            <tr>
+                <th>{{charging_time_lbl}}</th>
+                <th>{{session_id_lbl}}</th>
+                <th>{{duration_hrs_lbl}}</th>
+                <th>{{energy_used_k_wh_lbl}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    {{from_lbl}} {{chargingSessionStartDate}}, {{startTime}}
+                    <br />
+                    {{to_lbl}} &nbsp;&nbsp; {{chargingSessionEndDate}}, {{endTime}}
+                </td>
+                <td>{{sessionId}}</td>
+                <td>{{chargingDuration}}</td>
+                <td>{{effectiveEnergyConsumed}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="">
+    <h2 style="margin: 10px 0;" class="font-bold mb-2">
+        {{billing_summary_lbl}}
+    </h2>
+    <table>
+        <thead>
+            <tr>
+                <th>{{description_lbl}}</th>
+                <th>{{total_lbl}}</th>
+                <th>{{unit_price_lbl}}</th>
+                <th>{{amount_lbl}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{energy_consumed_k_wh_lbl}}</td>
+                <td>{{effectiveEnergyConsumed}}</td>
+                <td>{{effectiveBaseRate}}</td>
+                <td>{{baseFare}}</td>
+            </tr>
+            <tr>
+                <td>{{parking_rate_hrs_lbl}}</td>
+                <td>{{chargingDuration}}</td>
+                <td>{{parkingRatePerHour}}</td>
+                <td>{{parkingFee}}</td>
+            </tr>
+            <tr>
+                <td>{{peak_or_offpeak_charges_hrs_lbl}}</td>
+                <td>{{peakOffPeakHours}}</td>
+                <td>{{peakOffPeakRate}}</td>
+                <td>{{peakOffPeakCharges}}</td>
+            </tr>
+            <tr>
+                <td class="font-bold">{{sub_total_lbl}}</td>
+                <td></td>
+                <td></td>
+                <td class="font-bold">{{grossAmount}}</td>
+            </tr>
+            <tr>
+                <td>{{discount_lbl}} ({{discount}}%)</td>
+                <td></td>
+                <td></td>
+                <td>{{discountedAmount}}</td>
+            </tr>
+            <tr>
+                <td>{{penalty_lbl}}</td>
+                <td></td>
+                <td></td>
+                <td>{{penaltyAmount}}</td>
+            </tr>
+            <tr>
+                <td class="font-bold">{{taxable_amount_lbl}}</td>
+                <td></td>
+                <td></td>
+                <td class="font-bold">{{taxableAmount}}</td>
+            </tr>
+            <tr>
+                <td>{{tax_lbl}} ({{taxRate}}%)</td>
+                <td></td>
+                <td></td>
+                <td>{{tax}}</td>
+            </tr>
+            <tr class="text-white font-bold">
+                <td colspan="2"></td>
+                <td class="bg-blue-500">{{total_amount_lbl}}</td>
+                <td class="bg-blue-500">{{netAmount}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,16 @@
+{
+  "name": "@shared-libs/charging-session-helper",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "@shared-libs/db": "workspace:*",
+    "@shared-libs/constants": "workspace:*",
+    "@shared-libs/helpers": "workspace:*",
+    "@shared-libs/queues": "workspace:*",
+    "dotenv": "^16.0.3",
+    "luxon": "^3.4.4"
+  },
+  "exports": {
+    ".": "./index.js"
+  }
+}

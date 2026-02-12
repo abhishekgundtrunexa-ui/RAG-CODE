@@ -1,0 +1,57 @@
+const supportedChargerConfigurationKeys = [
+  "HeartbeatInterval",
+  "ConnectionTimeOut",
+  "WebSocketPingInterval",
+  "MeterValueSampleInterval",
+  "AuthorizeRemoteTxRequests",
+  "LocalAuthorizeOffline",
+  "LocalPreAuthorize",
+  "AllowOfflineTxForUnknownId",
+  "StopTransactionOnInvalidId",
+  "StopTransactionOnEVSideDisconnect",
+  "UnlockConnectorOnEVSideDisconnect",
+  "ResetRetries",
+  "LocalAuthListEnabled",
+  "LocalAuthListMaxLength",
+  "SendLocalListMaxLength",
+  "MeterValuesAlignedData",
+  "MeterValuesSampledData",
+  "ClockAlignedDataInterval",
+  "TxStartPoint",
+  "TxStopPoint",
+
+  "NetworkProfile",
+  "NetworkInterfacePriority",
+  "Apn",
+  "ApnUser",
+  "ApnPassword",
+  "MaxChargingProfile",
+  "ChargeRateUnit",
+  "SupportedChargingModes",
+  "AllowFastCharging",
+  "LogLevel",
+  "RemoteLogEnabled",
+  "LogFileUploadInterval",
+  "FirmwareUpdateInterval",
+  "AutoFirmwareUpdate",
+  "MaxCurrentLimit",
+  "MaxPowerLimit",
+
+  "OCPPCommCtrl",
+  "EvConnCtrl",
+  "DCMaxCurrent",
+  "ACChargingProfile",
+
+  "PvMode",
+  "LedBrightness",
+
+  "evb.TransactionStartMode",
+  "evb.ConnectorPhaseRotation",
+  "evb.RfidWhitelistEnabled",
+
+  "AdminPassword",
+  "BacklightTimeout",
+  "ChargingEnabled"
+];
+
+module.exports = { supportedChargerConfigurationKeys }

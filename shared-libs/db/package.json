@@ -1,0 +1,12 @@
+{
+  "name": "@shared-libs/db",
+  "version": "1.0.0",
+  "dependencies": {
+    "@shared-libs/constants": "workspace:*",
+    "typeorm": "^0.3.14",
+    "mysql2": "^3.3.1",
+    "mongoose": "^7.5.2",
+    "dotenv": "^16.0.3",
+    "uuid": "^11.0.3"
+  }
+}

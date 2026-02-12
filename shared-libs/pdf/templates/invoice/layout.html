@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{receipt_lbl}}</title>
+    <style>
+        body {
+            background-color: #f3f4f6;
+            /* padding: 2rem; */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            line-height: 1.2;
+            font-size: 14px;
+        }
+
+        .container {
+            /* max-width: 42rem; */
+            height: 100%;
+            margin: 0 auto;
+            /* background-color: #ffffff; */
+            padding: 20px;
+            /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+            margin-top: 0;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* margin-bottom: 1rem; */
+        }
+
+        .header h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .header img {
+            height: 2rem;
+        }
+
+        .mb-4 {
+            margin-bottom: 1rem;
+            line-height: 1;
+        }
+
+        .border-t {
+            border-top: 3px solid gray;
+        }
+
+        .border-b {
+            border-bottom: 3px solid gray;
+        }
+
+        .py-4 {
+            /* padding-top: 1rem;
+            padding-bottom: 1rem; */
+        }
+
+        /* .flex {
+            display: flex;
+            justify-content: space-between;
+            word-wrap: break-word;
+        } */
+
+        .flex {
+            display: flex;
+            justify-content: space-between;
+            line-height: 1.3;
+        }
+
+        .flex>div {
+            flex: 1;
+            /* Equal width for both divs */
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            /* border: 1px solid #000; Just for visibility */
+            /* padding: 6px; */
+        }
+
+        .font-bold {
+            font-weight: bold;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* .mt-8 {
+            margin-top: 2rem;
+        } */
+
+        table {
+            width: 100%;
+            text-align: left;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 0.5rem;
+        }
+
+        th {
+            background-color: #e5e7eb;
+        }
+
+        .bg-blue-500 {
+            background-color: #3b82f6;
+            color: #ffffff;
+        }
+
+        .text-white {
+            color: #ffffff;
+        }
+
+        .summary {
+            line-height: 1.6;
+        }
+
+        .details-container {
+            display: flex;
+            justify-content: flex-start;
+            gap: 20px;
+        }
+
+        .details-container .mb-4 {
+            width: 50%;
+            text-align: left;
+        }
+
+        .right-conatiner {
+            border-left: 2px solid gray;
+            padding-left: 30px;
+        }
+
+        .font {
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        {{header}}
+        {{details}}
+        {{footer}}
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "@shared-libs/analytics-helper",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "@shared-libs/db": "workspace:*",
+    "dotenv": "^16.0.3",
+    "typeorm": "^0.3.14",
+    "luxon": "^3.4.4"
+  },
+  "exports": {
+    ".": "./index.js"
+  }
+}

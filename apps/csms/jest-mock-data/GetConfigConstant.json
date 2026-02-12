@@ -1,0 +1,13 @@
+{
+  "standardThreshold": "40-60",
+  "peakThreshold": 100,
+  "offpeakThreshold": 30,
+  "peakRateMultiplier": 1.5,
+  "offPeakRateMultiplier": 0.8,
+  "energyLoss": 5,
+  "averageChargingRate": 11.5,
+  "peakStartTime": "03:00:00 PM",
+  "peakEndTime": "05:30:00 PM",
+  "offPeakStartTime": "03:00:00 AM",
+  "offPeakEndTime": "09:30:00 AM"
+}

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Invoice</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      /* background-color: #f5f5f5; */
+      height: 100%;
+    }
+
+    .container {
+      /* width: 210mm; */
+      height: 100%;
+      margin: 0 auto;
+      padding: 20px;
+      /* background-color: #ffffff; */
+      /* border-radius: 8px; */
+      /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+      /* box-sizing: border-box; */
+      overflow: hidden;
+      margin-top: 0;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #333;
+    }
+
+    h1 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 14px;
+      margin: 5px 0;
+    }
+
+    h3 {
+      font-size: 12px;
+      margin: 5px 0;
+      background-color: #d3d3d3;
+      padding: 4px;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    p {
+      margin: 1px 0;
+    }
+
+    .flex-container {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    .flex-item {
+      width: 50%;
+      font-size: 14px;
+    }
+
+    .detailed-billing {
+      padding: 10px;
+      border-radius: 5px;
+      background-color: transparent;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    /* Table styling */
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+    }
+
+    .table th,
+    .table td {
+      text-align: left;
+      padding: 8px;
+      font-size: 11px;
+      border: none;
+    }
+
+    .table th {
+      background-color: #d3d3d3;
+      font-weight: bold;
+    }
+
+    .table td.total {
+      font-weight: bold;
+      font-size: 12px;
+    }
+
+    .table td.desc {
+      text-align: left;
+    }
+
+    /* Horizontal line styling */
+    .section-line {
+      margin: 10px 0;
+      border: 0;
+      border-top: 1px solid #333;
+    }
+
+    .footer {
+      margin-top: 10px;
+      font-size: 10px;
+      color: #666;
+      text-align: center;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 80px;
+      max-width: 150px;
+      object-fit: contain;
+      margin-bottom: 40px;
+    }
+
+    .header-text {
+      flex: 1;
+      margin-top: 2px;
+    }
+
+    /* Total Amount Row styling */
+    .total-cell {
+      background-color: #28a745;
+      color: #ffffff;
+      font-weight: bold;
+    }
+
+    .address-line {
+      margin: 4px 0;
+      line-height: 1.4;
+      font-size: 14px;
+      white-space: normal;
+      display: inline;
+    }
+
+    .address-container p {
+      display: inline;
+    }
+
+    .address-container p:after {
+      content: " ";
+      display: inline;
+    }
+
+    .address-container {
+      margin: 4px 0;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Header section with logo and title -->
+    <div class="header">
+      <div>
+        <h1>INVOICE</h1>
+        <div class="header-text">
+          <p>Invoice Number: {{invoiceNumber}}</p>
+          <p>Date of issue: {{purchaseDate}}</p>
+          <p>Date due: {{expiryDate}}</p>
+        </div>
+      </div>
+      <div class="logo">
+        <img src="{{logo}}" alt="Flownex Logo" />
+      </div>
+    </div>
+
+
+    <hr class="section-line" />
+
+    <div class="flex-container">
+      <!-- From Section -->
+      <div class="flex-item">
+        <h2>From</h2>
+        <p>{{companyName}}</p>
+        <div id="companyAddress"></div>
+        <p>+91 {{companyPhoneNumber}}</p>
+        <p>{{companyEmail}}</p>
+      </div>
+
+      <!-- Invoice Section -->
+      <div class="flex-item">
+        <h2><b>Billed To</b></h2>
+        <p>{{cpoName}}</p>
+        <div>
+          Location:
+          <span id="cpoAddress"></span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Horizontal line -->
+    <hr class="section-line" />
+
+    <div class="detailed-billing">
+      <h2>{{currencySymbol}} 12.00 {{currencyName}} due {{expiryDate}}</h2>
+      <br />
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>QTY</th>
+            <th>Unit Price</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="desc">
+              {{subscriptionPlanName}} <br />{{purchaseDate}} - {{expiryDate}}
+            </td>
+            <td>1</td>
+            <td>{{currencySymbol}} {{subscriptionPlanPrice}}</td>
+            <td>{{currencySymbol}} {{subscriptionPlanPrice}}</td>
+          </tr>
+          <tr>
+            <td colspan="2"></td>
+            <td><b>Sub Total</b></td>
+            <td>{{currencySymbol}} {{subscriptionPlanPrice}}</td>
+          </tr>
+          <tr>
+            <td colspan="2"></td>
+            <td><b>Tax</b></td>
+            <td>{{currencySymbol}} 2</td>
+          </tr>
+          <tr>
+            <td colspan="2"></td>
+            <td class="total-cell">Amount Due</td>
+            <td class="total-cell">{{currencySymbol}} 12</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Horizontal line -->
+    <hr class="section-line" />
+
+    <div class="detailed-billing">
+      <h3>Payment Information</h3>
+      <table class="table">
+        <tbody>
+          <tr>
+            <td class="desc" style="width: 30%;">Card Holder Name</td>
+            <td style="width: 80%;">{{cardHolderName}}</td>
+          </tr>
+          <tr>
+            <td class="desc" style="width: 30%;">Transaction Payment Id</td>
+            <td style="width: 50%;">{{transactionPaymentId}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br />
+    <div class="footer">
+      <p>We hope you had a great experience. Charge with Chargnex again!</p>
+    </div>
+  </div>
+  <script>
+    function populateAddress(address, elementId) {
+      const addressContainer = document.getElementById(elementId);
+      addressContainer.innerHTML = '';
+
+      const cleanAddress = address
+        .trim()
+        .replace(/\s+/g, ' ')
+        .replace(/\n/g, ' ')
+        .replace(/\r/g, ' ')
+        .replace(/\t/g, ' ')
+        .replace(/,\s*/g, ', ');
+      const addressLine = document.createElement("p");
+      addressLine.className = 'address-line';
+      addressLine.textContent = cleanAddress;
+      addressContainer.appendChild(addressLine);
+    }
+
+    populateAddress("{{companyAddress}}", "companyAddress");
+    populateAddress("{{cpoAddress}}", "cpoAddress");
+  </script>
+</body>
+
+</html>

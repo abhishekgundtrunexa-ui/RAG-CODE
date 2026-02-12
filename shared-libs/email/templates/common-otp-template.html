@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Email OTP Verification</title>
+  </head>
+  <body style="margin: 0; padding: 0; background-color: #f4f6f8; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+    <table cellpadding="0" cellspacing="0" width="100%" style="background-color: #f4f6f8; padding: 40px 0;">
+      <tr>
+        <td align="center">
+          <table cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); overflow: hidden;">
+            <tr>
+              <td style="background-color: #4f46e5; padding: 20px 40px; text-align: center;">
+                <h1 style="color: #ffffff; margin: 0; font-size: 24px;">Verify Your Email</h1>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 30px 40px;">
+                <p style="font-size: 16px; color: #333333; line-height: 1.6;">
+                  Hi there,
+                  <br><br>
+                  {{body}}, please use the following One-Time Password (OTP):
+                </p>
+                <div style="margin: 30px 0; text-align: center;">
+                  <span style="display: inline-block; padding: 16px 32px; background-color: #eef2ff; border: 2px dashed #4f46e5; color: #1e1e2d; font-size: 28px; letter-spacing: 6px; font-weight: bold; border-radius: 8px;">
+                    {{otp}}
+                  </span>
+                </div>
+                <p style="font-size: 15px; color: #555555;">
+                  This OTP is valid for the next <strong>5 minutes</strong>. If you didn't request this, please ignore this message.
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 20px 40px; background-color: #f9fafb; text-align: center;">
+                <p style="font-size: 13px; color: #999999;">
+                  Need help? Contact us at <a href="support@chargnex.com" style="color: #4f46e5; text-decoration: none;">support@chargnex.com</a>
+                </p>
+                <p style="font-size: 13px; color: #c0c0c0;">&copy; 2025 Trunexa Inc. All rights reserved.</p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

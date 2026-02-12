@@ -1,0 +1,12 @@
+<?xml version=”1.0” encoding=”UTF-8”?>
+<request>
+    <store_id>${store_id}</store_id>
+    <api_token>${api_token}</api_token>
+    <emvdata_add>
+        <order_id>${order_id}</order_id>
+        <txn_number>${txn_number}</txn_number>
+        <pan_entry>${pan_entry}</pan_entry>
+        <cvm_indicator>${cvm_indicator}</cvm_indicator>
+        <completion_data>${completion_data}</completion_data>
+    </emvdata_add>
+</request>

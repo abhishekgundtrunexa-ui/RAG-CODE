@@ -1,0 +1,12 @@
+{
+  "name": "@shared-libs/littlepay-helper",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "aws-sdk": "^2.1655.0",
+    "dotenv": "^16.4.5"
+  },
+  "exports": {
+    ".": "./index.js"
+  }
+}

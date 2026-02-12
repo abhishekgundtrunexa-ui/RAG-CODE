@@ -1,0 +1,27 @@
+{
+  "name": "ocpp",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "nodemon index.js",
+    "start:prod": "node index.js"
+  },
+  "dependencies": {
+    "@shared-libs/constants": "workspace:*",
+    "@shared-libs/db": "workspace:*",
+    "@shared-libs/helpers": "workspace:*",
+    "@shared-libs/ocpp-log": "workspace:*",
+    "@shared-libs/pusher": "workspace:*",
+    "@shared-libs/queues": "workspace:*",
+    "axios": "^1.6.8",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "luxon": "^3.4.4",
+    "nodemon": "^3.1.0",
+    "ocpp-rpc": "^2.1.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "typeorm": "^0.3.14"
+  }
+}

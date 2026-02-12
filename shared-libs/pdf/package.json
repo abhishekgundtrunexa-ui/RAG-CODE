@@ -1,0 +1,21 @@
+{
+  "name": "@shared-libs/pdf",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "@shared-libs/db": "workspace:*",
+    "@shared-libs/helpers": "workspace:*",
+    "@shared-libs/constants": "workspace:*",
+    "@shared-libs/pusher": "workspace:*",
+    "aws-sdk": "^2.1655.0",
+    "qrcode": "^1.5.4",
+    "handlebars": "^4.7.8",
+    "puppeteer": "^23.5.0",
+    "axios": "^1.6.8",
+    "dotenv": "^16.0.3",
+    "luxon": "^3.4.4"
+  },
+  "exports": {
+    ".": "./index.js"
+  }
+}

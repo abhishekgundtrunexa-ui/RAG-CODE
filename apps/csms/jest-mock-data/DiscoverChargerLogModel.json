@@ -1,0 +1,116 @@
+[
+  {
+    "_id": "674eda2980cc066fc8af7e94",
+    "guestId": null,
+    "customerId": null,
+    "filters": {
+      "lat": "19.11309279228488",
+      "lng": "73.01384181495689"
+    },
+    "country": "",
+    "city": "",
+    "state": "",
+    "lat": "",
+    "lng": "",
+    "platform": "u",
+    "browser": "PostmanRuntime",
+    "agent": "PostmanRuntime/7.43.0",
+    "timezone": "",
+    "browserversion": "7.43.0",
+    "os": "unknown",
+    "createdAt": "2024-12-03T10:15:05.637Z",
+    "updatedAt": "2024-12-03T10:15:05.637Z"
+  },
+  {
+    "_id": "674eda8f80cc066fc8af7e96",
+    "guestId": null,
+    "customerId": null,
+    "filters": {
+      "lat": "45.51404417195084",
+      "lng": "-73.71843909416089"
+    },
+    "country": "",
+    "city": "",
+    "state": "",
+    "lat": "",
+    "lng": "",
+    "platform": "u",
+    "browser": "PostmanRuntime",
+    "agent": "PostmanRuntime/7.43.0",
+    "timezone": "",
+    "browserversion": "7.43.0",
+    "os": "unknown",
+    "createdAt": "2024-12-03T10:16:47.180Z",
+    "updatedAt": "2024-12-03T10:16:47.180Z"
+  },
+  {
+    "_id": "674edb8c80cc066fc8af7e98",
+    "guestId": null,
+    "customerId": null,
+    "filters": {
+      "lat": "45.51404417195084",
+      "lng": "-73.71843909416089"
+    },
+    "country": "",
+    "city": "",
+    "state": "",
+    "lat": "",
+    "lng": "",
+    "platform": "u",
+    "browser": "PostmanRuntime",
+    "agent": "PostmanRuntime/7.43.0",
+    "timezone": "",
+    "browserversion": "7.43.0",
+    "os": "unknown",
+    "createdAt": "2024-12-03T10:21:00.728Z",
+    "updatedAt": "2024-12-03T10:21:00.728Z"
+  },
+  {
+    "_id": "674edbb580cc066fc8af7e9a",
+    "guestId": null,
+    "customerId": null,
+    "filters": {
+      "lat": "45.51404417195084",
+      "lng": "-73.71843909416089"
+    },
+    "country": "",
+    "city": "",
+    "state": "",
+    "lat": "",
+    "lng": "",
+    "platform": "u",
+    "browser": "PostmanRuntime",
+    "agent": "PostmanRuntime/7.43.0",
+    "timezone": "",
+    "browserversion": "7.43.0",
+    "os": "unknown",
+    "createdAt": "2024-12-03T10:21:41.694Z",
+    "updatedAt": "2024-12-03T10:21:41.694Z"
+  },
+  {
+    "_id": "676295c4ae65b0377c9368b5",
+    "guestId": null,
+    "customerId": "b69510a2-5a64-49cd-8812-e57c0a3f344f",
+    "filters": {
+      "lat": "19.50",
+      "lng": "74.5735",
+      "viewType": "map",
+      "distance": "500",
+      "page": 1,
+      "limit": -1
+    },
+    "country": "",
+    "city": "",
+    "state": "",
+    "lat": "",
+    "lng": "",
+    "platform": "u",
+    "browser": "PostmanRuntime",
+    "agent": "PostmanRuntime/7.43.0",
+    "timezone": "",
+    "browserversion": "7.43.0",
+    "os": "unknown",
+    "createdAt": "2024-12-18T09:28:36.228Z",
+    "updatedAt": "2024-12-18T09:28:36.228Z"
+  }
+]

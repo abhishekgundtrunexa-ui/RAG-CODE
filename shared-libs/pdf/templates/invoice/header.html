@@ -1,0 +1,36 @@
+<div class="header">
+    <h1 style="margin: 0;">
+        {{receipt_upper_lbl}}
+    </h1>
+    <img alt="ChargeX logo" src="{{logo}}" />
+</div>
+<p style="margin: 0;">
+    {{header_description}}
+</p>
+<div class="details-container">
+    <div class="">
+        <p style="margin: 10px 0;"><strong>{{receipt_number_lbl}}</strong> {{receiptNumber}}</p>
+        <p style="margin: 10px 0;"><strong>{{date_of_issue_and_time_lbl}}</strong> {{dateOfIssue}}, {{timeOfIssue}}</p>
+        <p style="margin: 10px 0;"><strong>{{transaction_id_lbl}}</strong> {{paymentTransId}}</p>
+        <p style="margin: 10px 0;"><strong>{{type_lbl}}</strong> {{paymentTransType}}</p>
+        <p style="margin: 10px 0;"><strong>{{card_system_lbl}}</strong> {{cardSchema}}</p>
+        <p style="margin: 10px 0;">{{appLable}}</p>
+    </div>
+    <div class="mb-4 right-conatiner">
+        <p style="margin: 10px 0;"><strong>{{card_number_lbl}}</strong> **** **** **** {{cardNumber}}</p>
+        <p style="margin: 10px 0;"><strong>TVR:</strong> {{tvr}}</p>
+        <p style="margin: 10px 0;"><strong>TSI:</strong> {{tsi}}</p>
+        <p style="margin: 10px 0;"><strong>AID:</strong> {{aid}}</p>
+        <p style="margin: 10px 0;"><strong>{{reference_lbl}}</strong> {{referenceNumber}}</p>
+        <p style="margin: 10px 0;"><strong>{{authorization_no_lbl}}</strong> {{authCode}}</p>
+    </div>
+</div>
+<div class="flex border-t border-b py-4">
+    <div>
+        <p style="margin-top: 5px;"><b>{{charger_details_evse_station_lbl}}</b></p>
+        <!-- <p style="margin: 10px 0;">{{evseStationName}}</p> -->
+        <p style="margin: 10px 0;">{{evseStationAddress}}</p>
+        <p style="margin: 10px 0;">{{evseStationCity}} {{evseStationState}} {{evseStationAreaCode}}</p>
+        <p style="margin: 10px 0;"><b>{{chargebox_id_lbl}}</b> {{chargeBoxId}}</p>
+    </div>
+</div>

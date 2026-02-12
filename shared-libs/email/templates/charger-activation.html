@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Template</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+      table {
+        border-spacing: 0;
+        width: 100%;
+      }
+      td {
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body style="margin: 0; padding: 0; background-color: #ffffff;">
+    <table align="center" cellpadding="0" cellspacing="0" style="border-collapse: collapse; width: 636px;">
+      <!-- Header -->
+      <tr>
+        <td bgcolor="#1876f4" style="padding: 16px 40px;">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr style="height: 48px;">
+              <td width="50%">
+                <img style="display:block;width: 180px;height:48px;" src="https://cgx-storage.s3.amazonaws.com/assets/chargnex-logo-email.png" alt="" />
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <!-- Content -->
+      <tr>
+        <td style="padding: 40px; ">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <td style="padding-bottom: 20px; box-sizing: border-box; height: 28px; flex-grow: 1; flex-basis: auto; font-family: Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei UI', 'Microsoft Yahei', 'Source Han Sans CN', sans-serif; font-size: 20px; font-weight: 600; line-height: 28px; color: #384860; letter-spacing: -0.8px; position: relative; text-align: left; white-space: nowrap; z-index: 5;">
+                Hey,
+              </td>
+            </tr>
+            <tr>
+              <td style="padding-bottom:20px; box-sizing: border-box; height: 24px; flex-grow: 1; flex-shrink: 0; flex-basis: auto; font-family: Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei UI', 'Microsoft Yahei', 'Source Han Sans CN', sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; color: #384860; letter-spacing: -0.64px; position: relative; text-align: left; white-space: nowrap; z-index: 7;">
+                Welcome to Chargnex! Below are your charger activation details.
+              </td>
+            </tr>
+            <tr>
+              <td style="padding-bottom: 20px; box-sizing: border-box; height: 27px; flex-grow: 1; flex-basis: auto; font-family: Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei UI', 'Microsoft Yahei', 'Source Han Sans CN', sans-serif; font-size: 18px; font-weight: 500; line-height: 27px; color: #384860; letter-spacing: -0.72px; position: relative; text-align: left; white-space: nowrap; z-index: 9;">
+                Charger Serial Number:
+              </td>
+            </tr>
+            <tr>
+              <td style="padding-bottom: 20px; box-sizing: border-box; height: 48px; flex-grow: 1; flex-basis: auto; font-family: Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei UI', 'Microsoft Yahei', 'Source Han Sans CN', sans-serif; font-size: 32px; font-weight: 600; line-height: 48px; color: #343434; letter-spacing: 1.28px; position: relative; text-align: left; white-space: nowrap; z-index: 11;">
+                {{serialNumber}}
+              </td>
+            </tr>
+            <tr>
+              <td style="padding-bottom: 20px; box-sizing: border-box; height: 27px; flex-grow: 1; flex-basis: auto; font-family: Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei UI', 'Microsoft Yahei', 'Source Han Sans CN', sans-serif; font-size: 18px; font-weight: 500; line-height: 27px; color: #384860; letter-spacing: -0.72px; position: relative; text-align: left; white-space: nowrap; z-index: 9;">
+                Charger Activation Code:
+              </td>
+            </tr>
+            <tr>
+              <td style="padding-bottom: 20px; box-sizing: border-box; height: 48px; flex-grow: 1; flex-basis: auto; font-family: Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei UI', 'Microsoft Yahei', 'Source Han Sans CN', sans-serif; font-size: 32px; font-weight: 600; line-height: 48px; color: #343434; letter-spacing: 1.28px; position: relative; text-align: left; white-space: nowrap; z-index: 11;">
+                {{activationCode}}
+              </td>
+            </tr>
+            <tr>
+              <td style="padding-bottom: 20px; box-sizing: border-box; height: 27px; flex-grow: 1; flex-basis: auto; font-family: Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei UI', 'Microsoft Yahei', 'Source Han Sans CN', sans-serif; font-size: 18px; font-weight: 500; line-height: 27px; color: #384860; letter-spacing: -0.72px; position: relative; text-align: left; white-space: nowrap; z-index: 9;">
+                Device admin access code:
+              </td>
+            </tr>
+            <tr>
+              <td style="padding-bottom: 20px; box-sizing: border-box; height: 48px; flex-grow: 1; flex-basis: auto; font-family: Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei UI', 'Microsoft Yahei', 'Source Han Sans CN', sans-serif; font-size: 32px; font-weight: 600; line-height: 48px; color: #343434; letter-spacing: 1.28px; position: relative; text-align: left; white-space: nowrap; z-index: 11;">
+                {{deviceAdminPassCode}}
+              </td>
+            </tr>
+            <tr>
+              <td style="box-sizing: border-box; display: flex; width: 540px; justify-content: flex-start; align-items: flex-start; flex-grow: 1; flex-basis: 0; font-family: Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei UI', 'Microsoft Yahei', 'Source Han Sans CN', sans-serif; font-size: 16px; font-weight: 400; line-height: 22px; color: #384860; letter-spacing: -0.64px; position: relative; text-align: left; z-index: 23;">
+                Follow the instructions on our platform to activate your charger.
+              </td>
+            </tr>
+            <tr>
+              <td style="padding-bottom: 20px; box-sizing: border-box; display: flex; width: 540px; height: 44px; justify-content: flex-start; align-items: flex-start; flex-grow: 1; flex-basis: 0; font-family: Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei UI', 'Microsoft Yahei', 'Source Han Sans CN', sans-serif; font-size: 16px; font-weight: 400; line-height: 22px; color: #384860; letter-spacing: -0.64px; position: relative; text-align: left; z-index: 23;">
+                For any questions, contact us at support&#8203;&#64;&#8203;chargnex&#8203;&#46;&#8203;com.
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding-bottom: 20px; box-sizing: border-box; height: 24px; flex-grow: 1; flex-shrink: 0; flex-basis: auto; font-family: Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei UI', 'Microsoft Yahei', 'Source Han Sans CN', sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; color: #384860; letter-spacing: -0.64px; position: relative; text-align: left; white-space: nowrap; z-index: 25;">
+                Thank you for choosing Chargnex!
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding-bottom: 20px; box-sizing: border-box; height: 22px; flex-grow: 1; flex-shrink: 0; flex-basis: auto; font-family: Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei UI', 'Microsoft Yahei', 'Source Han Sans CN', sans-serif; font-size: 16px; font-weight: 500; line-height: 22px; color: #384860; letter-spacing: -0.64px; position: relative; text-align: left; white-space: nowrap; z-index: 28;">
+                Best regards, <br />
+                Chargnex Support Team <br />
+                support&#8203;&#64;&#8203;chargnex&#8203;&#46;&#8203;com <br />
+                www&#8203;&#46;&#8203;chargnex&#8203;&#46;&#8203;com
+              </td>
+            </tr>
+            
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
